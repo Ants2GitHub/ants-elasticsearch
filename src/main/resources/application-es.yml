@@ -1,0 +1,24 @@
+spring:
+  data:
+    elasticsearch:
+      repositories:
+        # 仓库中的数据存储
+        enabled: true
+---
+spring:
+  profiles: dev
+  data:
+    elasticsearch:
+      # 集群节点的名称
+      cluster-name: tuanche-es
+      # 集群节点,逗号隔开
+      cluster-nodes: 172.16.12.71:9300,172.16.12.72:9300,172.16.12.64:9300
+---
+spring:
+  profiles: test
+  data:
+    elasticsearch:
+      # 集群节点的名称
+      cluster-name:
+      # 集群节点,逗号隔开
+      cluster-nodes:

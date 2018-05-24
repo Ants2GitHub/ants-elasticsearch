@@ -1,0 +1,8 @@
+#引入相关配置文件
+spring:
+  profiles:
+    active: dev
+    include: include
+# 指定项目启动端口
+server:
+  port: 9001
