@@ -23,34 +23,34 @@ import org.springframework.context.annotation.Configuration;
 public class ElasticSearchConfig {
 
 
-    @Value("${tuanche.elasticsearch.cluster-name}")
+    @Value("${ants.elasticsearch.cluster-name}")
     private String elasticsearchClusterName;
 
-    @Value("${tuanche.elasticsearch.cluster-nodes}")
+    @Value("${ants.elasticsearch.cluster-nodes}")
     private String elasticsearchClusterNodes;
 
-    @Value("${tuanche.elasticsearch.thread-pool}")
+    @Value("${ants.elasticsearch.thread-pool}")
     private Integer elasticsearchThreadPool;
 
-    @Value("${tuanche.elasticsearch.connect-timeout}")
+    @Value("${ants.elasticsearch.connect-timeout}")
     private int connectTimeOut;
 
-    @Value("${tuanche.elasticsearch.socket-timeout}")
+    @Value("${ants.elasticsearch.socket-timeout}")
     private int socketTimeOut;
 
-    @Value("${tuanche.elasticsearch.connection-request-timeout}")
+    @Value("${ants.elasticsearch.connection-request-timeout}")
     private int connectionRquestTimeOut;
 
-    @Value("${tuanche.elasticsearch.max-connect-num}")
+    @Value("${ants.elasticsearch.max-connect-num}")
     private int maxConnectNum;
 
-    @Value("${tuanche.elasticsearch.max-connect-per-route}")
+    @Value("${ants.elasticsearch.max-connect-per-route}")
     private int maxConnectPerRout;
 
-    @Value("${tuanche.elasticsearch.unique-connect-time-config}")
+    @Value("${ants.elasticsearch.unique-connect-time-config}")
     private boolean uniqueConnectTimeConfig;
 
-    @Value("${tuanche.elasticsearch.unique-connect-num-config}")
+    @Value("${ants.elasticsearch.unique-connect-num-config}")
     private boolean uniqueConnectNumConfig;
 
 
@@ -116,13 +116,13 @@ public class ElasticSearchConfig {
         });
     }
 
-    /**
-     * @description
-     * @author ants·ht 初始化客户端的配置
-     * @date 2018/6/4 14:36
-     * @param
-     * @return
-    */
+    /** 
+     * @description 
+     * @author ants·ht 初始化客户端的配置 
+     * @date 2018/6/4 14:36 
+     * @param 
+     * @return  
+    */ 
     private void initConfig() {
         printElasticSearchYmlConf();
         if(null != elasticsearchClusterNodes && "" != elasticsearchClusterNodes && !"null".equals(elasticsearchClusterNodes)) {

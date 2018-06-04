@@ -4,7 +4,7 @@ spring:
       repositories:
         # 仓库中的数据存储
         enabled: true
-tuanche:
+ants:
   elasticsearch:
     # 线程池数量
     thread-pool: 5
@@ -25,7 +25,7 @@ tuanche:
 ---
 spring:
   profiles: dev
-tuanche:
+ants:
   elasticsearch:
     # 集群节点的名称
     cluster-name: tuanche-es

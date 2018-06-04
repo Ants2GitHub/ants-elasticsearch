@@ -35,7 +35,6 @@ public class DemoServiceImpl implements DemoService {
             CreateIndexResponse createIndexResponse = restHighLevelClient.indices().create(new CreateIndexRequest(DEMO_INDEX_NAME));
             return new JsonResponse(HttpStatus.OK.value(),HttpStatus.OK.name(),createIndexResponse.toString());
         } catch (Exception e) {
-            e.printStackTrace();
             log.error("create demo index error.....,e={}",e);
             return new JsonResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(),HttpStatus.INTERNAL_SERVER_ERROR.name(),null);
         }
