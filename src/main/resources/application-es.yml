@@ -4,15 +4,34 @@ spring:
       repositories:
         # 仓库中的数据存储
         enabled: true
+tuanche:
+  elasticsearch:
+    # 线程池数量
+    thread-pool: 5
+    # 连接ES超时时间设置
+    connect-timeout: 1000
+    # 链接Socket超时时间
+    socket-timeout: 30000
+    # 请求链接超时时间设置
+    connection-request-timeout: 500
+    # 最大链接数量
+    max-connect-num: 100
+    # 最大链接客户端数
+    max-connect-per-route: 100
+    # 是否需要开启链接超时时间设置
+    unique-connect-time-config: true
+    # 是否需要开启链接数量设置
+    unique-connect-num-config: true
 ---
 spring:
   profiles: dev
-  data:
-    elasticsearch:
-      # 集群节点的名称
-      cluster-name: tuanche-es
-      # 集群节点,逗号隔开
-      cluster-nodes: 172.16.12.71:9300,172.16.12.72:9300,172.16.12.64:9300
+tuanche:
+  elasticsearch:
+    # 集群节点的名称
+    cluster-name: tuanche-es
+    # 集群节点,逗号隔开
+    cluster-nodes: 172.16.60.71:9200,172.16.60.72:9200,172.16.12.64:9200
+
 ---
 spring:
   profiles: test
